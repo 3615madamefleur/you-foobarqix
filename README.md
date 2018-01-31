@@ -4,7 +4,7 @@ Made up for Wemanity / WeSquad internal administration.
 
 ## Usage
 In order to run this tool you need at least 2 things :
-* [Java SE Runtime Environment 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Java Open-Source Development Kit](http://jdk.java.net/9/)
+* [Java SE Runtime Environment 9](http://www.oracle.com/technetwork/java/javase/downloads/jre9-downloads-3848532.html) or [Java Open-Source Development Kit 9](http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html?printOnly=1)
 
   or
 * [Docker](https://www.docker.com/community-edition#/download) and [Docker-compose](https://docs.docker.com/compose/install/)
@@ -19,7 +19,7 @@ Assuming you downloaded the files inside a ```~/Downloads/yolo/``` directory :
 Now you have 3 ways to execute program :
 * with **Java** :
 
-  ```java -jar target/foobarqix-1.0-spring-boot.jar```
+  ```java -jar build/foobarqix-1.0-spring-boot.jar```
 
 * with the **Dockerfile** (run as admin) :
 
