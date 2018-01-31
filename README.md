@@ -41,10 +41,10 @@ root
  │  │  └─ ... some Java classes
  │  └─ test/java/
  │     └─ ... some Java test classes
- ├─ target
- │  └─ site
- │  │  ├─ ... some web files
- │  │  └─ index.html    // Dev documentation entry-point
+ ├─ doc
+ │  ├─ ... some web files
+ │  └─ index.html    // Dev documentation entry-point
+ ├─ build
  │  └─ xxx.jar          // Java archive
  ├─ pom.xml             // Maven build configuration file
  ├─ docker-compose.yml  // Docker-compose configuration file
