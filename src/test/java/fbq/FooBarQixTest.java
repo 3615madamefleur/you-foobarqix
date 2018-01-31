@@ -1,3 +1,5 @@
+package fbq;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +15,7 @@ public class FooBarQixTest {
         test = new FooBarQix(1, 100);
     }
 
-    @Test (expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testExceptions() {
         test = new FooBarQix(-5, 68);
         test = new FooBarQix(156, 42);

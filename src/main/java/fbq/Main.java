@@ -1,3 +1,5 @@
+package fbq;
+
 /**
  * Class used as a program entry-point
  */
