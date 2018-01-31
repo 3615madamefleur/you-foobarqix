@@ -1,4 +1,4 @@
-FROM java:8
+FROM java:9
 WORKDIR /
 ADD target/foobarqix-1.0-spring-boot.jar foobarqix-1.0-spring-boot.jar
 EXPOSE 8080

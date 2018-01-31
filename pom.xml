@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>9</java.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <spring-boot-maven-plugin.version>1.5.9.RELEASE</spring-boot-maven-plugin.version>
         <junit.version>4.12</junit.version>
