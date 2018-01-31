@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -10,12 +11,7 @@ public final class FooBarQix {
     private static final String SEPARATOR = "\n";
     private final int min;
     private final int max;
-
-    private final Map<Integer, String> pairs = new LinkedHashMap<Integer, String>() {{
-        put(3, "Foo");
-        put(5, "Bar");
-        put(7, "Qix");
-    }};
+    private Map<Integer, String> pairs = new LinkedHashMap<>();
 
     /**
      * FooBarQix constructor
@@ -28,6 +24,10 @@ public final class FooBarQix {
         }
         this.min = min;
         this.max = max;
+        pairs.put(3, "Foo");
+        pairs.put(5, "Bar");
+        pairs.put(7, "Qix");
+        pairs = Collections.unmodifiableMap(pairs);
     }
 
     /**
