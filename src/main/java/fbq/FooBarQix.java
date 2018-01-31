@@ -10,10 +10,20 @@ import java.util.stream.IntStream;
  * Class used to convert a series of numbers into FooBarQix formatted strings
  */
 public final class FooBarQix {
+    public static final int FOO = 3;
+    public static final int BAR = 5;
+    public static final int QIX = 7;
     private static final String SEPARATOR = "\n";
     private final int min;
     private final int max;
-    private Map<Integer, String> pairs = new LinkedHashMap<>();
+    private static Map<Integer, String> pairs = new LinkedHashMap<>();
+
+    static {
+        pairs.put(FOO, "Foo");
+        pairs.put(BAR, "Bar");
+        pairs.put(QIX, "Qix");
+        pairs = Collections.unmodifiableMap(pairs);
+    }
 
     /**
      * FooBarQix constructor
@@ -26,10 +36,6 @@ public final class FooBarQix {
         }
         this.min = min;
         this.max = max;
-        pairs.put(3, "Foo");
-        pairs.put(5, "Bar");
-        pairs.put(7, "Qix");
-        pairs = Collections.unmodifiableMap(pairs);
     }
 
     /**
@@ -38,7 +44,8 @@ public final class FooBarQix {
      */
     public String foobarqix() {
         return IntStream.range(min, max + 1)
-                .mapToObj(e -> e + " --> " + transform(e)).collect(Collectors.joining(SEPARATOR));
+                .mapToObj(i -> i + " --> " + transform(i))
+                .collect(Collectors.joining(SEPARATOR));
     }
 
     /**
