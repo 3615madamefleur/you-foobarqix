@@ -43,7 +43,7 @@ root
  │     └─ ... some Java test classes
  ├─ doc
  │  ├─ ... some web files
- │  └─ index.html    // Dev documentation entry-point
+ │  └─ index.html       // Dev documentation entry-point
  ├─ build
  │  └─ xxx.jar          // Java archive
  ├─ pom.xml             // Maven build configuration file

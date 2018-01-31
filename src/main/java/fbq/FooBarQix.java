@@ -17,7 +17,6 @@ public final class FooBarQix {
 
     /**
      * FooBarQix constructor
-     *
      * @param min minimum range value (inclusive)
      * @param max maximum range value (inclusive)
      */
@@ -35,7 +34,6 @@ public final class FooBarQix {
 
     /**
      * Convert the range of specified numbers into FooBarQix formatted strings
-     *
      * @return a string representation of the formatted strings list
      */
     public String foobarqix() {
@@ -45,7 +43,6 @@ public final class FooBarQix {
 
     /**
      * Convert a number into FooBarQix formatted string
-     *
      * @param number number to convert
      * @return a FooBarQix representation of the number
      */
