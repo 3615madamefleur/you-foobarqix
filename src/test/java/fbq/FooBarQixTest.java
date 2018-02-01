@@ -26,22 +26,14 @@ public class FooBarQixTest {
                 .forEach(i -> mock.put(i, fbq.transform(i)));
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void should_throw_exception_when_args_are_under_zero() {
-        Throwable thrown = catchThrowable(() -> {
-            FooBarQix exception = new FooBarQix(-5, 68);
-        });
-        assertThat(thrown).isInstanceOf(IllegalArgumentException.class)
-                .hasNoCause();
+        new FooBarQix(-5, 68);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void should_throw_exception_when_args_are_reversed() {
-        Throwable thrown = catchThrowable(() -> {
-            FooBarQix exception = new FooBarQix(156, 42);
-        });
-        assertThat(thrown).isInstanceOf(IllegalArgumentException.class)
-                .hasNoCause();
+        new FooBarQix(156, 42);
     }
 
     @Test
