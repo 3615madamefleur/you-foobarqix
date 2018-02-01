@@ -4,7 +4,8 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
+import static java.util.stream.IntStream.*;
 
 /**
  * Class used to convert a series of numbers into FooBarQix formatted strings
@@ -43,7 +44,7 @@ public final class FooBarQix {
      * @return a string representation of the formatted strings list
      */
     public String foobarqix() {
-        return IntStream.range(min, max + 1)
+        return range(min, max + 1)
                 .mapToObj(i -> i + " --> " + transform(i))
                 .collect(Collectors.joining(SEPARATOR));
     }
@@ -54,12 +55,14 @@ public final class FooBarQix {
      * @return a FooBarQix representation of the number
      */
     public String transform(int number) {
-        String result = pairs.keySet().stream()
+        String result = pairs.keySet()
+                .stream()
                 .filter(p -> number % p == 0)
                 .map(pairs::get)
                 .collect(Collectors.joining());
 
-        result += String.valueOf(number).chars()
+        result += String.valueOf(number)
+                .chars()
                 .mapToObj(c -> pairs.getOrDefault(Character.getNumericValue(c), ""))
                 .collect(Collectors.joining());
 
