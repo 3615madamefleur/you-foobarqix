@@ -37,13 +37,17 @@ Now you have 3 ways to execute program :
 ```
 root
  ├─ src        
- │  └─ main/java/
+ │  ├─ main/java/
  │  │  └─ ... some Java classes
  │  └─ test/java/
  │     └─ ... some Java test classes
  ├─ doc
- │  ├─ ... some web files
- │  └─ index.html       // Dev documentation entry-point
+ │  ├─ build
+ │  │  ├─ ... some web files
+ │  │  └─ index.html    // Build infos entry-point
+ │  └─ dev
+ │     ├─ ... some web files
+ │     └─ index.html    // Dev documentation entry-point
  ├─ build
  │  └─ xxx.jar          // Java archive
  ├─ pom.xml             // Maven build configuration file
